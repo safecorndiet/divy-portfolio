@@ -1,16 +1,14 @@
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { ThemeProvider } from "next-themes";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import type { Metadata, Viewport } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Divy Shah — Portfolio",
   description: "Learning Timeline + Projects",
 };
-export const viewport: Viewport = { themeColor: "black" };
 
 export default function RootLayout({
   children,
@@ -26,7 +24,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SiteHeader />
+          <SiteHeader /> {/* ✅ navbar is back */}
           {children}
           <SiteFooter />
           <Analytics />

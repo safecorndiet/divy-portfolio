@@ -4,5 +4,9 @@
 
 @import "../tokens.css";
 
-html { scroll-behavior: smooth; }
-body { @apply bg-background text-foreground antialiased; }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-background text-foreground antialiased;
+}
